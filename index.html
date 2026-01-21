@@ -694,20 +694,27 @@
             if (q.includes('영수증') || q.includes('캡처') || q.includes('캡쳐') || q.includes('스크린샷') || q.includes('증빙')) {
                 return `<div class="policy-box">
                     <span class="info-tag">영수증 제출</span><br><br>
-                    <strong>📄 영수증 제출 필수:</strong><br>
-                    • 결제한 <u>모든 영수증</u>을 공유해야 합니다<br>
-                    • 누락 시 해당 건은 환불 처리 불가<br><br>
+                    <strong>📱 애플(iOS) 유저:</strong><br>
+                    • <u>잔여 백금주화 + IAP 상품</u> 모두 환불 받는 경우<br>
+                    • <strong>모든 결제 영수증 스크린샷 필수</strong><br>
+                    • 이유: 잔여 백금주화를 달러로 환산 후, 결제 내역 중 해당 금액과 근접한 상품을 찾아 환불 처리<br><br>
                     
-                    <strong>📸 영수증이 너무 많은 경우:</strong><br>
+                    <strong>🤖 구글(Android) 유저:</strong><br>
+                    • 저희가 모든 영수증을 확인 가능<br>
+                    • 영수증 스크린샷 불필요<br><br>
+                    
+                    <strong>📸 영수증이 너무 많은 경우 (iOS):</strong><br>
                     • JEEYEA에게 직접 연락 주세요<br>
                     • 별도 처리 방법 안내받으실 수 있습니다
                 </div>
                 
                 <strong>💬 유저 답변 예시:</strong><br>
-                "환불 처리를 위해 결제하신 모든 영수증을 공유해주셔야 합니다. 영수증 양이 많아 번거로우신 경우, 저에게 말씀해주시면 별도로 도움드리겠습니다."<br><br>
+                <strong>[iOS 유저]</strong> "iOS 유저의 경우, 잔여 백금주화와 IAP 상품을 함께 환불받으시려면 모든 결제 영수증 스크린샷을 공유해주셔야 합니다. 이는 백금주화를 달러로 환산한 금액에 맞는 결제 항목을 찾아 환불 처리하기 위함입니다. 영수증이 많아 번거로우신 경우 저에게 말씀해주시면 별도로 도움드리겠습니다."<br><br>
+                
+                <strong>[Android 유저]</strong> "구글 플레이 유저는 저희가 결제 내역을 확인할 수 있어 영수증 제출이 필요하지 않습니다."<br><br>
                 
                 <strong>⚠️ CS 담당자 참고:</strong><br>
-                영수증이 너무 많은 케이스는 JEEYEA에게 에스컬레이션하세요.`;
+                iOS 유저 중 영수증이 너무 많은 케이스는 JEEYEA에게 에스컬레이션하세요.`;
             }
             
             // 현금 환불
@@ -1020,20 +1027,27 @@
             if (q.includes('receipt') || q.includes('capture') || q.includes('screenshot') || q.includes('proof')) {
                 return `<div class="policy-box">
                     <span class="info-tag">Receipt Submission</span><br><br>
-                    <strong>📄 Receipt Submission Required:</strong><br>
-                    • You must share <u>all receipts</u> for your payments<br>
-                    • Missing receipts cannot be refunded<br><br>
+                    <strong>📱 Apple (iOS) Users:</strong><br>
+                    • If receiving refund for <u>remaining platinum coins + IAP products</u><br>
+                    • <strong>Screenshots of all payment receipts required</strong><br>
+                    • Reason: Need to convert remaining platinum coins to USD and find matching purchase item close to that amount for refund processing<br><br>
                     
-                    <strong>📸 If you have too many receipts:</strong><br>
+                    <strong>🤖 Google (Android) Users:</strong><br>
+                    • We can view all receipts on our end<br>
+                    • Receipt screenshots not required<br><br>
+                    
+                    <strong>📸 If you have too many receipts (iOS):</strong><br>
                     • Please contact JEEYEA directly<br>
                     • You can receive guidance on alternative processing methods
                 </div>
                 
                 <strong>💬 User Response Example:</strong><br>
-                "You need to share all payment receipts for refund processing. If you have many receipts and find it cumbersome, please let me know and I will help you separately."<br><br>
+                <strong>[iOS Users]</strong> "For iOS users receiving refunds for both remaining platinum coins and IAP products, you need to share screenshots of all payment receipts. This is to find the purchase item matching the USD-converted platinum coin amount for refund processing. If you have many receipts and find it cumbersome, please let me know and I will help you separately."<br><br>
+                
+                <strong>[Android Users]</strong> "For Google Play users, we can check payment history on our end, so receipt submission is not required."<br><br>
                 
                 <strong>⚠️ CS Agent Note:</strong><br>
-                For cases with too many receipts, escalate to JEEYEA.`;
+                For iOS users with too many receipts, escalate to JEEYEA.`;
             }
             
             // Cash refund
