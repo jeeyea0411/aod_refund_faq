@@ -716,18 +716,42 @@
             
             // 현금 환불
             if (q.includes('현금') || q.includes('계좌') || q.includes('송금') || q.includes('이체')) {
-                return `<div class="warning-box">
-                    <span class="info-tag" style="background:#ffc107;">현금 환불 불가</span><br><br>
-                    <strong>❌ 현금 환불은 불가합니다</strong><br><br>
-                    
-                    <strong>✅ 환불 방식:</strong><br>
-                    • 스토어 결제 내역 환불이 원칙<br>
+                return `<div class="policy-box">
+                    <span class="info-tag">환불 방식</span><br><br>
+                    <strong>✅ 기본 환불 방식:</strong><br>
+                    • 스토어 결제 내역 환불이 원칙입니다<br>
                     • 원래 결제 수단으로 자동 환불<br>
-                    • 구글 플레이 / 앱스토어 정책 따름
+                    • 구글 플레이 / 앱스토어 정책 따름<br><br>
+                    
+                    <strong>⚠️ 특수한 경우:</strong><br>
+                    • 매우 특수한 상황에 한해 계좌 이체 가능<br>
+                    • 해당 케이스는 개별 검토 필요
                 </div>
                 
                 <strong>💬 유저 답변:</strong><br>
-                "환불은 스토어 결제 내역을 통해 진행되며, 원래 결제하신 수단(카드/계정)으로 환불됩니다. 현금 송금이나 계좌 이체는 불가능합니다."`;
+                "환불은 원칙적으로 스토어 결제 내역을 통해 진행되며, 원래 결제하신 수단(카드/계정)으로 환불됩니다. 다만 특수한 상황의 경우 개별적으로 검토하여 계좌 이체로 진행할 수 있으니, 구체적인 상황을 말씀해주시면 확인해드리겠습니다."<br><br>
+                
+                <strong>⚠️ CS 담당자 참고:</strong><br>
+                계좌 이체 요청 시 상위 매니저에게 에스컬레이션하여 특수 케이스 해당 여부를 판단받으세요.`;
+            }
+            
+            // 엑솔라 결제
+            if (q.includes('엑솔라') || q.includes('xsolla')) {
+                return `<div class="warning-box">
+                    <span class="info-tag" style="background:#ffc107;">엑솔라(Xsolla) 결제</span><br><br>
+                    <strong>⚠️ 엑솔라 결제 건 환불:</strong><br>
+                    • 저희는 엑솔라 결제 환불 권한이 없습니다<br>
+                    • <strong>엑솔라 고객센터를 통해 환불 신청</strong>해주세요<br><br>
+                    
+                    <strong>📞 엑솔라 고객센터:</strong><br>
+                    • 엑솔라 공식 고객센터로 문의 필요
+                </div>
+                
+                <strong>💬 유저 답변:</strong><br>
+                "엑솔라를 통해 결제하신 건에 대해서는 저희가 환불 권한이 없습니다. 엑솔라 고객센터를 통해 환불 신청을 진행해주시기 바랍니다."<br><br>
+                
+                <strong>⚠️ CS 담당자 참고:</strong><br>
+                엑솔라 결제 건은 저희 권한 밖이므로 명확히 안내하세요.`;
             }
             
             // 계정 삭제/탈퇴
@@ -1046,18 +1070,42 @@
             
             // Cash refund
             if (q.includes('cash') || q.includes('bank') || q.includes('transfer') || q.includes('wire')) {
-                return `<div class="warning-box">
-                    <span class="info-tag" style="background:#ffc107;">Cash Refund Not Available</span><br><br>
-                    <strong>❌ Cash refunds are not available</strong><br><br>
-                    
-                    <strong>✅ Refund Method:</strong><br>
+                return `<div class="policy-box">
+                    <span class="info-tag">Refund Method</span><br><br>
+                    <strong>✅ Standard Refund Method:</strong><br>
                     • Store payment history refund is the principle<br>
                     • Automatic refund to original payment method<br>
-                    • Follows Google Play / App Store policy
+                    • Follows Google Play / App Store policy<br><br>
+                    
+                    <strong>⚠️ Special Cases:</strong><br>
+                    • Bank transfer may be available in very special circumstances<br>
+                    • Such cases require individual review
                 </div>
                 
                 <strong>💬 User Response:</strong><br>
-                "Refunds are processed through store payment history and will be refunded to your original payment method (card/account). Cash transfers or bank wire transfers are not possible."`;
+                "Refunds are processed in principle through store payment history and will be refunded to your original payment method (card/account). However, in special circumstances, we can review individual cases and process via bank transfer. Please let us know your specific situation and we will check for you."<br><br>
+                
+                <strong>⚠️ CS Agent Note:</strong><br>
+                For bank transfer requests, escalate to senior manager to determine if it qualifies as a special case.`;
+            }
+            
+            // Xsolla payment
+            if (q.includes('xsolla')) {
+                return `<div class="warning-box">
+                    <span class="info-tag" style="background:#ffc107;">Xsolla Payment</span><br><br>
+                    <strong>⚠️ Xsolla Payment Refunds:</strong><br>
+                    • We do not have refund authority for Xsolla payments<br>
+                    • <strong>Please apply for refund through Xsolla customer center</strong><br><br>
+                    
+                    <strong>📞 Xsolla Customer Center:</strong><br>
+                    • Contact official Xsolla customer support
+                </div>
+                
+                <strong>💬 User Response:</strong><br>
+                "For payments made through Xsolla, we do not have refund authority. Please proceed with refund application through Xsolla customer center."<br><br>
+                
+                <strong>⚠️ CS Agent Note:</strong><br>
+                Xsolla payments are outside our authority, so provide clear guidance.`;
             }
             
             // Account deletion
